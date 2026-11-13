@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UGLD</title>
+<link rel="icon" href="img/crest.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="window raised">
+  <img id="perch" class="perch" alt="">
+  <header class="titlebar">
+    <img src="img/crest.png" alt="">
+    <span>UGLD.exe - UG Logistic Department</span>
+    <span class="ctl" aria-hidden="true"><i class="raised">_</i><i class="raised">&#9633;</i><i class="raised">&#215;</i></span>
+  </header>
+
+  <div class="banner sunken">
+    <img src="img/crest.png" alt="Union Guards Logistic Department logo">
+    <div>
+      <h1>Union Guards</h1>
+      <p>Logistic Department</p>
+    </div>
+  </div>
+
+  <div class="tabs"><span class="tab">UG Eligibility</span></div>
+
+  <section class="panel raised">
+    <fieldset>
+      <legend>Usernames</legend>
+      <textarea id="names" class="sunken" rows="4" spellcheck="false"></textarea>
+    </fieldset>
+
+    <div class="row">
+      <button id="check" class="raised">Check</button>
+      <button id="copyOk" class="raised" disabled>Copy eligible</button>
+      <button id="copyNo" class="raised" disabled>Copy ineligible</button>
+    </div>
+
+    <div class="list sunken">
+      <table id="results">
+        <thead><tr><th>Username</th><th>Group rank</th><th>Verdict</th><th>Reason</th></tr></thead>
+        <tbody><tr><td colspan="4" class="empty">No results yet.</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="statusbar"><span id="status" class="sunken">Ready</span></footer>
+</main>
+
+<aside class="clippy" id="clippy">
+  <p id="say" class="bubble" role="status"></p>
+  <img id="clippyImg" src="img/Clippy_Wave.png" alt="Clippy">
+</aside>
+
+<dialog id="credits" class="window raised">
+  <form method="dialog">
+    <header class="titlebar">
+      <img src="img/crest.png" alt="">
+      <span>Credits</span>
+      <span class="ctl"><button class="raised" aria-label="Close">&#215;</button></span>
+    </header>
+    <div class="credits">
+      <img src="img/Clippy_Wave.png" alt="">
+      <dl>
+        <dt>Website</dt><dd>Yours truly</dd>
+        <dt>Clippy (model)</dt><dd>evanciao</dd>
+      </dl>
+    </div>
+    <p class="okrow"><button class="raised" autofocus>OK</button></p>
+  </form>
+</dialog>
+
+<div id="startMenu" class="startmenu raised" popover>
+  <div class="who"><img src="img/crest.png" alt=""><span><b>Union Guards</b><small>Logistic Department</small></span></div>
+  <button id="openApp" popovertarget="startMenu" popovertargetaction="hide"><img src="img/crest.png" alt=""> UGLD.exe</button>
+  <button id="openCredits" popovertarget="startMenu" popovertargetaction="hide"><img src="img/Clippy_Icon.png" alt=""> Credits</button>
+</div>
+
+<footer class="taskbar">
+  <button class="start raised" popovertarget="startMenu"><img src="img/crest.png" alt=""> Start</button>
+  <span class="task sunken">UGLD.exe</span>
+  <span id="clock" class="clock sunken"></span>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
